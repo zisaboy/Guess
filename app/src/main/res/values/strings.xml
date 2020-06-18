@@ -5,4 +5,14 @@
     <string name="button">Button</string>
     <string name="ed_number"></string>
     <string name="textview">TextView</string>
+    <string name="Yes_you_got_it">Yes, you got it</string>
+    <string name="dialog_title">Message</string>
+    <string name="Bigger">Bigger</string>
+    <string name="Smaller">Smaller</string>
+    <string name="title_activity_material">MaterialActivity</string>
+
+
+
+    <string name="counter">0</string>
+    <string name="Excellent">Excellent! The number is 6</string>
 </resources>

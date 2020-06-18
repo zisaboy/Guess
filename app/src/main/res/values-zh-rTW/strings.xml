@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">猜數字</string>
+    <string name="plase_enter_a_number">請輸入數字</string>
+    <string name="OK">確認</string>
+    <string name="Yes_you_got_it">讚! 猜對了</string>
+    <string name="button">按鈕</string>
+    <string name="dialog_title">訊息</string>
+    <string name="Bigger">更大</string>
+    <string name="Smaller">更小</string>
+    <string name="counter">counter</string>
+    <string name="Excellent">超神的! 數字就是 6</string>
+</resources>
