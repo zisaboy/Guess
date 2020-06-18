@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_material.*
 import kotlinx.android.synthetic.main.content_material.*
 
 class MaterialActivity : AppCompatActivity() {
+
     val secretNumber = SecretNumber()
     val TAG = MaterialActivity::class.java.simpleName
     override fun onCreate(savedInstanceState: Bundle?) {
