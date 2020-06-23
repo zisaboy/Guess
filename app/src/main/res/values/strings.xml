@@ -12,7 +12,9 @@
     <string name="title_activity_material">MaterialActivity</string>
 
 
-
     <string name="counter">0</string>
     <string name="Excellent">Excellent! The number is 6</string>
+    <string name="RecordCount">0</string>
+    <string name="save">SAVE</string>
+    <string name="ed_name"></string>
 </resources>

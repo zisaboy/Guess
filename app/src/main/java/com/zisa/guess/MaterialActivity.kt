@@ -1,5 +1,7 @@
 package com.zisa.guess
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -33,7 +35,14 @@ class MaterialActivity : AppCompatActivity() {
 
         }
         counter.setText(secretNumber.count.toString())
+        Log.d(TAG, "onCreate: "+secretNumber.secrent)
+        val count = getSharedPreferences("guess", Context.MODE_PRIVATE)
+            .getInt("REC_COUNTER", -1)
 
+        var nick = getSharedPreferences("guess", Context.MODE_PRIVATE)
+            .getString("REC_NICKNAME", null)
+
+        Log.d(TAG, "data: $count/$nick")
     }
 
     fun check(view : View) {
@@ -50,26 +59,18 @@ class MaterialActivity : AppCompatActivity() {
         counter.setText(secretNumber.count.toString())
 //        Toast.makeText(this,message,Toast.LENGTH_LONG).show()
 
-        if(diff == 0 && secretNumber.count < 3)
-        {
-            message = getString(R.string.Excellent)
-            AlertDialog.Builder(this)
-                .setTitle(getString(R.string.dialog_title))
-                .setMessage(message)
-                .setPositiveButton(getString(R.string.OK), null)
-                .show()
-        }
-        else
-        {
-            AlertDialog.Builder(this)
-                .setTitle(getString(R.string.dialog_title))
-                .setMessage(message)
-                .setPositiveButton(getString(R.string.OK), null)
-                .show()
-        }
-
-
-
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.dialog_title))
+            .setMessage(message)
+            .setPositiveButton(getString(R.string.OK), {dialog, which ->
+                if(diff == 0)
+                {
+                    val intent = Intent(this, RecordActivity::class.java)
+                    intent.putExtra("COUNTER", secretNumber.count)
+                    startActivity(intent)
+                }
+            })
+            .show()
     }
 
 }

@@ -10,4 +10,7 @@
     <string name="Smaller">更小</string>
     <string name="counter">counter</string>
     <string name="Excellent">超神的! 數字就是 6</string>
+    <string name="RecordCount">0</string>
+    <string name="save">SAVE</string>
+    <string name="ed_name"></string>
 </resources>
