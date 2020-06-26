@@ -13,4 +13,5 @@
     <string name="RecordCount">0</string>
     <string name="save">SAVE</string>
     <string name="ed_name"></string>
+    <string name="Replay_OK">OK</string>
 </resources>

@@ -44,11 +44,11 @@ class MaterialActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setTitle("Replay me")
             .setMessage("Are you sure?")
-            .setPositiveButton(getString(R.string.OK), { dialog, which ->
+            .setPositiveButton(getString(R.string.Replay_OK)) { dialog, which ->
                 secretNumber.reset()
                 counter.setText(secretNumber.count.toString())
                 ed_number.setText("")
-            })
+            }
             .setNeutralButton("Cancel", null)
             .show()
     }

@@ -3,8 +3,8 @@ package com.zisa.guess
 import java.util.*
 
 class SecretNumber {
-    var secrent : Int = Random().nextInt(10) + 1
-//    var secrent : Int = 6
+    //var secrent : Int = Random().nextInt(10) + 1
+    var secrent : Int = 6
     var count = 0
 
     fun validate(number : Int) : Int
@@ -15,8 +15,8 @@ class SecretNumber {
 
     fun reset()
     {
-        secrent = Random().nextInt(10) + 1
-//        secrent = 6
+        //secrent = Random().nextInt(10) + 1
+        secrent = 6
         count = 0
 
     }
