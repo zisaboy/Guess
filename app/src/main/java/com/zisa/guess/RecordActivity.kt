@@ -1,9 +1,12 @@
 package com.zisa.guess
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_record.*
+import java.time.Instant
 
 class RecordActivity : AppCompatActivity() {
 
@@ -21,6 +24,11 @@ class RecordActivity : AppCompatActivity() {
                 .putString("REC_NICKNAME", nick)
                 .apply()  //有空再存
                 //.commit() //必定儲存
+
+                val intent = Intent()
+                intent.putExtra("NICK",nick)
+                setResult(Activity.RESULT_OK, intent)
+                finish()
         }
     }
 }
